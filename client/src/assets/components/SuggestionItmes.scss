@@ -1,0 +1,31 @@
+.suggestionItemCard {
+  flex:1;
+  position: relative;
+  height: 270px;
+  max-width: 250px;
+  min-width: 200px;
+  float: left;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, .09);
+
+  pre {
+    margin: 0;
+    padding: 0;
+    white-space: pre-line;
+    word-break: break-word;
+  }
+  >p{
+    position: absolute;
+    font-size: 10pt;
+    bottom: 10px;
+    &.itemLike{
+      left: 10px;
+      color: var(--font-like-color);
+    }
+    &.itemDate{
+      right: 10px;
+    }
+  }
+}
