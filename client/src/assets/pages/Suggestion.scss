@@ -1,0 +1,14 @@
+.suggestionWrap{
+  display: flex;
+  height: 100%;
+  .leftSide{
+    flex: 1;
+    position: relative;
+    min-width: 500px;
+    height: 100%;
+  }
+  .test{
+    position: relative;
+    flex: 2;
+  }
+}

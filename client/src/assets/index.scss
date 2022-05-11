@@ -1,5 +1,12 @@
+//Components
+@import "components/SuggestionTitleText";
+@import "components/SuggestionInputArea";
+
 // Layout
 @import "layout/DefaultLayout";
+
+//Pages
+@import "pages/Suggestion";
 
 //variable
 @import "variable";

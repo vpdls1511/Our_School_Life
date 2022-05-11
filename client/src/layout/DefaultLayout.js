@@ -1,4 +1,4 @@
-import {Outlet} from 'react-router-dom'
+import {NavLink, Outlet} from 'react-router-dom'
 import {Link} from "react-router-dom";
 
 const DefaultLayout = () => {
@@ -7,9 +7,9 @@ const DefaultLayout = () => {
       <a>우리들의 <p>학교생활</p></a>
       <nav>
         <ul>
-          <li> <Link to={"/"}>불만사항</Link> </li>
-          <li> <Link to={"/"}>개선</Link> </li>
-          <li> <Link to={"/"}>스터디 모집</Link> </li>
+          <li> <NavLink to={"/suggestion"}>불만사항</NavLink> </li>
+          <li> <NavLink to={"/"}>개선</NavLink> </li>
+          <li> <NavLink to={"/"}>스터디 모집</NavLink> </li>
         </ul>
       </nav>
       <div className={"userIconArea"}>
@@ -20,7 +20,9 @@ const DefaultLayout = () => {
         <img src={"userIcon.png"} />
       </div>
     </header>
-    <Outlet />
+    <div className={"defaultOutletWrap"}>
+      <Outlet />
+    </div>
   </>
 }
 

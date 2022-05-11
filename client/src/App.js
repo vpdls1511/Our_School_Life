@@ -3,6 +3,7 @@ import {useRoutes} from 'react-router-dom';
 import DefaultLayout from "./layout/DefaultLayout";
 //Pages
 import Home from "./page/Home";
+import Suggestion from "./page/Suggestion";
 
 function App() {
   return useRoutes([
@@ -10,7 +11,8 @@ function App() {
       path : '/',
       element : <DefaultLayout />,
       children : [
-        {index : true , element: <Home />}
+        {index : true , element: <Home />},
+        {path : "suggestion" , element: <Suggestion />}
       ]
     }
   ]);

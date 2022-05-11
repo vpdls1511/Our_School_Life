@@ -1,0 +1,55 @@
+.suggestionAreaWrap{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 460px;
+  transform: translate(-50%, -50%);
+  >.inputArea{
+    position: relative;
+    box-shadow: 0 10px 15px #7f7f7f;
+    border-radius: 10px;
+    overflow: hidden;
+    >.inputBox{
+      width: calc(100% - 30px);
+      font-size: 13pt;
+      font-weight: normal;
+      height: 250px;
+      padding: 15px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      resize: none;
+    }
+    >p{
+      position: absolute;
+      float: left;
+      font-size: 10pt;
+      bottom: 10px;
+      left: 10px;
+      &.textMax{
+        font-weight: bold;
+        color: var(--warning-color) ;
+      }
+    }
+    >button{
+      float: right;
+      margin: 5px;
+      border: none;
+      background-color: var(--font-highlight-2);
+      width: 100px;
+      height: 30px;
+      color: white;
+      border-radius: 15px;
+    }
+  }
+  .suggestionInfo{
+    margin-top: 100px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+    font-size: 15pt;
+    border-radius: 10px;
+    background-color: var(--font-highlight-1);
+  }
+}

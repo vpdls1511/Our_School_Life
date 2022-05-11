@@ -30,7 +30,7 @@
           text-decoration: none;
           color: var(--font-disable);
           transition: .5s;
-          &:active{
+          &.active{
             color: var(--font-active);
           }
         }
@@ -70,4 +70,10 @@
       opacity: 1;
     }
   }
+}
+
+
+.defaultOutletWrap{
+  width: 100vw;
+  height: calc(100vh - 80px);
 }
