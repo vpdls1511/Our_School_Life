@@ -1,6 +1,6 @@
 import {useRoutes} from 'react-router-dom';
 //Layouts
-import Default from "./layout/Default";
+import DefaultLayout from "./layout/DefaultLayout";
 //Pages
 import Home from "./page/Home";
 
@@ -8,7 +8,7 @@ function App() {
   return useRoutes([
     {
       path : '/',
-      element : <Default />,
+      element : <DefaultLayout />,
       children : [
         {index : true , element: <Home />}
       ]

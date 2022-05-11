@@ -1,0 +1,73 @@
+.defaultTopHeader{
+  height: 80px;
+  >a{
+    font-weight: bold;
+    font-size: 20pt;
+    line-height: 80px;
+    margin-left: 20px;
+    >p{
+      display: inline-block;
+      color: var(--font-highlight-1);
+    }
+  }
+  >nav{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    >ul{
+      display: flex;
+      >li{
+        font-weight: bold;
+        font-size: 15pt;
+        text-align: center;
+        flex: 1;
+        min-width: 200px;
+        display: inline-block;
+        line-height: 80px;
+        cursor: pointer;
+        a{
+          text-decoration: none;
+          color: var(--font-disable);
+          transition: .5s;
+          &:active{
+            color: var(--font-active);
+          }
+        }
+        &:hover{
+          >a{color: var(--font-active);}
+        }
+      }
+    }
+  }
+  .userIconArea{
+    float: right;
+    display: inline-block;
+    height: 80px;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    opacity: .5;
+    transition: .5s;
+
+    >div{
+      float: left;
+      >p{
+        font-size: 10pt;
+        text-align: right;
+        font-weight: bold;
+      }
+    }
+    >img{
+      position: relative;
+      top: -5px;
+      width: 40px;
+      margin-left: 10px;
+      transition: .5s;
+    }
+    &:hover{
+      transform: scale(1.02);
+      opacity: 1;
+    }
+  }
+}
