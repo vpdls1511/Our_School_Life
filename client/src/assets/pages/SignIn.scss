@@ -1,0 +1,24 @@
+.signInWrap{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, .12);
+  vertical-align: center;
+  >p{
+
+  }
+  >input{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    outline: none;
+    margin: 10px auto;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid #999;
+  }
+}
