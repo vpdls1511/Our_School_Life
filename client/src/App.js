@@ -6,6 +6,7 @@ import Home from "./page/Home";
 import Suggestion from "./page/Suggestion";
 import AccountLayout from "./layout/AccountLayout";
 import SignIn from "./page/account/SignIn";
+import SignUp from "./page/account/SignUp";
 
 function App() {
   return useRoutes([
@@ -21,7 +22,8 @@ function App() {
       path : '/account',
       element : <AccountLayout />,
       children : [
-        {index : true , element: <SignIn />},
+        {path: "signin" , element: <SignIn />},
+        {path : "signup" , element: <SignUp />},
       ]
     }
   ]);

@@ -1,0 +1,42 @@
+.accountBackground{
+  >.img{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/authBackground.jpeg");
+    background-position: left top;
+    animation: slideImg 20s 0s ease infinite;
+  }
+  >.filter{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(255,255,255,.6);
+  }
+}
+
+.accountWrap{
+  background-color: white;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, .12);
+  vertical-align: center;
+}
+
+@keyframes slideImg {
+  0%{
+    background-position: left top;
+  }
+  50%{
+    background-position: right top;
+  }
+  100%{
+    background-position: left top;
+  }
+}

@@ -1,11 +1,13 @@
 import {Outlet} from "react-router-dom";
 
-const AccountLayout = () =>{
+const AccountLayout = () => {
   return <>
-
-    Layout
-    <div>
-      <Outlet />
+    <div className={"accountBackground"}>
+      <div className={"img"}/>
+      <div className={"filter"}/>
+    </div>
+    <div className={"accountWrap"}>
+      <Outlet/>
     </div>
   </>
 }
