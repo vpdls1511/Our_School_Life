@@ -1,15 +1,23 @@
 import SuggestionInputArea from "../components/suggestion/SuggestionInputArea";
 import SuggestionItems from "../components/suggestion/SuggestionItems";
+import {useState} from "react";
 
 const Suggestion = () => {
 
-  return<article className={"suggestionWrap"}>
-    <div className={"leftSide"}>
-      <SuggestionInputArea />
+  const [isWidth, setWidth] = useState(false);
+
+  return <article className={"suggestionWrap"}>
+    <button className={"leftSideViewBtn"} onClick={() => setWidth(!isWidth)}> open / hide</button>
+    <div className={"leftSide"} style={{
+      maxWidth: isWidth ? "0px" : "1000px"
+    }}>
+      <SuggestionInputArea/>
     </div>
-    <div className={"test"}>
-      <SuggestionItems />
-    </div>
+    <section className={"rightSide"}>
+      <div className={"suggestionItemsWrap"}>
+        <SuggestionItems/>
+      </div>
+    </section>
   </article>
 }
 

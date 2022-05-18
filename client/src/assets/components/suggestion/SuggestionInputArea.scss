@@ -1,15 +1,17 @@
-.suggestionAreaWrap{
+.suggestionAreaWrap {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 460px;
   transform: translate(-50%, -50%);
-  >.inputArea{
+
+  > .inputArea {
     position: relative;
     box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, .12);
     border-radius: 10px;
     overflow: hidden;
-    >.inputBox{
+
+    > .inputBox {
       width: calc(100% - 30px);
       font-size: 13pt;
       font-weight: normal;
@@ -20,18 +22,21 @@
       border: none;
       resize: none;
     }
-    >p{
+
+    > p {
       position: absolute;
       float: left;
       font-size: 10pt;
       bottom: 10px;
       left: 10px;
-      &.textMax{
+
+      &.textMax {
         font-weight: bold;
-        color: var(--warning-color) ;
+        color: var(--warning-color);
       }
     }
-    >button{
+
+    > button {
       float: right;
       margin: 5px;
       border: none;
@@ -42,7 +47,8 @@
       border-radius: 15px;
     }
   }
-  .suggestionInfo{
+
+  .suggestionInfo {
     margin-top: 100px;
     padding: 20px;
     color: white;

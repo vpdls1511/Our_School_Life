@@ -1,23 +1,28 @@
-.defaultTopHeader{
+.defaultTopHeader {
   height: 80px;
-  >a{
+
+  > a {
     font-weight: bold;
     font-size: 20pt;
     line-height: 80px;
     margin-left: 20px;
-    >p{
+
+    > p {
       display: inline-block;
       color: var(--font-highlight-1);
     }
   }
-  >nav{
+
+  > nav {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    >ul{
+
+    > ul {
       display: flex;
-      >li{
+
+      > li {
         font-weight: bold;
         font-size: 15pt;
         text-align: center;
@@ -26,21 +31,27 @@
         display: inline-block;
         line-height: 80px;
         cursor: pointer;
-        a{
+
+        a {
           text-decoration: none;
           color: var(--font-disable);
           transition: .5s;
-          &.active{
+
+          &.active {
             color: var(--font-active);
           }
         }
-        &:hover{
-          >a{color: var(--font-active);}
+
+        &:hover {
+          > a {
+            color: var(--font-active);
+          }
         }
       }
     }
   }
-  .userIconArea{
+
+  .userIconArea {
     float: right;
     display: inline-block;
     height: 80px;
@@ -50,22 +61,25 @@
     opacity: .5;
     transition: .5s;
 
-    >div{
+    > div {
       float: left;
-      >p{
+
+      > p {
         font-size: 10pt;
         text-align: right;
         font-weight: bold;
       }
     }
-    >img{
+
+    > img {
       position: relative;
       top: -5px;
       width: 40px;
       margin-left: 10px;
       transition: .5s;
     }
-    &:hover{
+
+    &:hover {
       transform: scale(1.02);
       opacity: 1;
     }
@@ -73,7 +87,7 @@
 }
 
 
-.defaultOutletWrap{
+.defaultOutletWrap {
   width: 100vw;
   height: calc(100vh - 80px);
 }

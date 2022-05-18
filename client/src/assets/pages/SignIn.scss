@@ -7,10 +7,12 @@
     > b {
       color: var(--font-highlight-2);
     }
-    &.goSignUp{
+
+    &.goSignUp {
       font-size: 10pt;
       margin-top: 10px;
-      > b{
+
+      > b {
         cursor: pointer;
       }
     }
@@ -27,6 +29,7 @@
       border: none;
       padding: 10px;
       border-bottom: 1px solid #999;
+
       &[type=submit] {
         margin-top: 50px;
         background-color: var(--font-highlight-2);

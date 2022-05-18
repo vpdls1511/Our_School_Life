@@ -1,4 +1,4 @@
-const SuggestionItem = () => {
+const SuggestionItem = ({addText}) => {
 
   const text = "국가원로자문회의의 의장은 직전대통령이 된다. 다만, 직전대통령이 없을 때에는 대통령이 지명한다.\n" +
     "\n" +
@@ -9,7 +9,7 @@ const SuggestionItem = () => {
     "국무총리는 국회의 동의를 얻어 대통령이 임명한다. 국회에서 의결된 법률안은 정부에 이송되어 15일"
 
   return <div className={"suggestionItemCard"}>
-    <pre> {text} </pre>
+    <pre> {text+addText} </pre>
     <p className={"itemLike"}>LIKE : 9,999+</p>
     <p className={"itemDate"}>2022-06-21</p>
   </div>

@@ -24,8 +24,8 @@ const SuggestionInputArea = () => {
                 onChange={handleTypingText}
                 onBlur={handleTypingText}
       />
-      <p className={ text.cnt >= 200 ? "textMax" : "" }>{text.cnt}/200</p>
-      <button> 제출하기 </button>
+      <p className={text.cnt >= 200 ? "textMax" : ""}>{text.cnt}/200</p>
+      <button> 제출하기</button>
     </div>
 
     <div className={"suggestionInfo"}>

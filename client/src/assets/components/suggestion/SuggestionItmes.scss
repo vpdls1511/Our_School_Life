@@ -1,31 +1,63 @@
 .suggestionItemCard {
   flex:1;
+  max-width: 25%;
   position: relative;
-  height: 270px;
-  max-width: 250px;
-  min-width: 200px;
-  float: left;
-  margin: 20px;
-  padding: 10px;
   border-radius: 10px;
+  margin: 20px;
   box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, .09);
+  counter-increment: count;
 
   pre {
-    margin: 0;
-    padding: 0;
+    width: calc(100% - 20px);
+    height: auto;
+    margin: 0 0 30px 0;
+    padding: 10px;
     white-space: pre-line;
     word-break: break-word;
   }
-  >p{
+
+  > p {
     position: absolute;
     font-size: 10pt;
     bottom: 10px;
-    &.itemLike{
+
+    &.itemLike {
       left: 10px;
       color: var(--font-like-color);
     }
-    &.itemDate{
+
+    &.itemDate {
       right: 10px;
     }
+  }
+
+  &:nth-child(4n+1) {
+    order: 1;
+  }
+
+  &:nth-child(4n+2) {
+    order: 2;
+  }
+
+  &:nth-child(4n+3) {
+    order: 3;
+  }
+
+  &:nth-child(4n+4) {
+    order: 4;
+  }
+
+  &::after{
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    background-color: #000;
+    color: #fff;
+    content: counter(count);
   }
 }

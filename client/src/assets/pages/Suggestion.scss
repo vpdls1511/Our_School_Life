@@ -1,14 +1,36 @@
-.suggestionWrap{
+.suggestionWrap {
   display: flex;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   height: 100%;
-  .leftSide{
+
+  .leftSideViewBtn {
+    position: absolute;
+    z-index: 99999999;
+  }
+
+  .leftSide {
     flex: 1;
     position: relative;
-    min-width: 500px;
+    overflow: hidden;
     height: 100%;
+    transition: .5s;
   }
-  .test{
-    position: relative;
+
+  .rightSide {
     flex: 2;
+    width: 100%;
+    height: calc(100vh - 140px);
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+
+    .suggestionItemsWrap {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: calc(100vh - 140px);
+    }
   }
 }

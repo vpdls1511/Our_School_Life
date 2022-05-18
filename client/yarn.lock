@@ -7886,6 +7886,11 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-waterfall-grid@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-waterfall-grid/-/react-waterfall-grid-1.2.1.tgz#9ebd17a3c7acdea7380aba8a359ed48b8494f834"
+  integrity sha512-svQ04xXEB6lo6qXC9vjhHJXn2p+LEf0+Jt1GK3gwM7ra77OtBWPajsvVQZ+qX5m1jKOOy0G306VsCM62kfG9Pg==
+
 react@^18.1.0:
   version "18.1.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.1.0.tgz#6f8620382decb17fdc5cc223a115e2adbf104890"

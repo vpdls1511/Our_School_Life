@@ -1,14 +1,50 @@
 import SuggestionItem from "./SuggestionItem";
 
 const SuggestionItems = () => {
-  return <section>
-    <SuggestionItem />
-    <SuggestionItem />
-    <SuggestionItem />
-    <SuggestionItem />
-    <SuggestionItem />
-    <SuggestionItem />
-    <SuggestionItem />
-  </section>
+  const layoutList = [
+    "\n\n\n12314123412341",
+    "\n412341234141234123414123412341",
+    "\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n41234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
+    "\n\n\n12314123412341",
+    "\n412341234141234123414123412341",
+    "\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n41234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
+    "\n\n\n12314123412341",
+    "\n412341234141234123414123412341",
+    "\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n41234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
+    "\n\n\n12314123412341",
+    "\n412341234141234123414123412341",
+    "\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n41234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
+    "\n\n\n12314123412341",
+    "\n412341234141234123414123412341",
+    "\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n41234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
+    "\n\n\n12314123412341",
+    "\n412341234141234123414123412341",
+    "\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
+    "\n\n\n\n\n\n41234123414123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
+    "\n\n\n\n\n\n\n\n\n\n\n\n4123412341"
+  ]
+
+  return <>
+    {layoutList.map((text, key) => {
+      return <SuggestionItem key={key} addText={text} />
+    })}
+  </>
 }
 export default SuggestionItems;
