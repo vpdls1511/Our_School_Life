@@ -11,19 +11,19 @@ import SignUp from "./page/account/SignUp";
 function App() {
   return useRoutes([
     {
-      path : '/',
-      element : <DefaultLayout />,
-      children : [
-        {index : true , element: <Home />},
-        {path : "suggestion" , element: <Suggestion />}
+      path: '/',
+      element: <DefaultLayout/>,
+      children: [
+        {index: true, element: <Home/>},
+        {path: "suggestion", element: <Suggestion/>}
       ]
     },
     {
-      path : '/account',
-      element : <AccountLayout />,
-      children : [
-        {path: "signin" , element: <SignIn />},
-        {path : "signup" , element: <SignUp />},
+      path: '/account',
+      element: <AccountLayout/>,
+      children: [
+        {path: "signin", element: <SignIn/>},
+        {path: "signup", element: <SignUp/>},
       ]
     }
   ]);

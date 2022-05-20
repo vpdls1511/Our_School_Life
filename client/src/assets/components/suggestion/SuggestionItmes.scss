@@ -1,6 +1,6 @@
 .suggestionItemCard {
   flex:1;
-  max-width: 25%;
+  width: calc(25% - 40px);
   position: relative;
   border-radius: 10px;
   margin: 20px;
