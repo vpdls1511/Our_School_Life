@@ -1,4 +1,4 @@
-package com.life.school.our.server.common;
+package com.life.school.our.server.application.common;
 
 
 import lombok.Getter;
