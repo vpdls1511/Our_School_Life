@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 import static com.life.school.our.server.application.post.entity.QPosts.posts;
 import static com.life.school.our.server.application.members.entity.QUsers.users;
@@ -14,11 +13,11 @@ import static com.life.school.our.server.application.members.entity.QUsers.users
 
 @Repository
 @RequiredArgsConstructor
-public class GetPostsDataImpl{
+public class GetPostsDataRepository {
 
     private final JPAQueryFactory queryFactory;
 
-    public List<Tuple> getRecentlySuggest() {
+    public List<Tuple> getRecentlySuggest(final int finalIdx) {
         return queryFactory
                 .select(posts, users)
                 .from(posts)
