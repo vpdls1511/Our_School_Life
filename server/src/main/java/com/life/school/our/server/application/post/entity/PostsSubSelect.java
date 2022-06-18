@@ -2,14 +2,24 @@ package com.life.school.our.server.application.post.entity;
 
 import com.life.school.our.server.application.common.BaseTimeEntity;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.Immutable;
 import org.hibernate.annotations.Subselect;
 
 import javax.persistence.*;
 
-@Data
 @Entity
+@Subselect(
+        "select *"
+        + " from posts"
+        + " order by created_at"
+        + " limit 20"
+)
+@Getter
+@Setter
 @Table(name = "Posts")
-public class Posts extends BaseTimeEntity {
+public class PostsSubSelect extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
