@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Subselect(
         "select *"
         + " from posts"
-        + " order by created_at"
+        + " order by created_at desc"
         + " limit 20"
 )
 @Getter
