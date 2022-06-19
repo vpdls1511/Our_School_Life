@@ -1,5 +1,6 @@
 package com.life.school.our.server.application.post.repository;
 
+import com.life.school.our.server.application.post.entity.QPostsSolveSubSelect;
 import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +10,8 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import java.util.List;
 
-import static com.life.school.our.server.application.members.entity.QUsers.users;
+import static com.life.school.our.server.application.members.entity.QMembers.members;
+import static com.life.school.our.server.application.post.entity.QPostsSolveSubSelect.postsSolveSubSelect;
 import static com.life.school.our.server.application.post.entity.QPostsSubSelect.postsSubSelect;
 
 
@@ -17,17 +19,21 @@ import static com.life.school.our.server.application.post.entity.QPostsSubSelect
 @RequiredArgsConstructor
 public class GetPostsDataRepository {
 
-    @Autowired
-    private EntityManager em;
-
     private final JPAQueryFactory queryFactory;
 
-
-    public List<Tuple> getRecentlySuggest(final int finalIdx) {
+    public List<Tuple> getRecentlySuggest() {
         return queryFactory
-                .select(postsSubSelect, users)
+                .select(postsSubSelect, members)
                 .from(postsSubSelect)
-                .join(users).on(postsSubSelect.USER_ID.eq(users.USER_ID))
+                .join(members).on(postsSubSelect.USER_ID.eq(members.userId))
+                .fetch();
+    }
+
+    public List<Tuple> getRecentlySolvedSuggest() {
+        return queryFactory
+                .select(postsSolveSubSelect, members)
+                .from(postsSolveSubSelect)
+                .join(members).on(postsSolveSubSelect.USER_ID.eq(members.userId))
                 .fetch();
     }
 

@@ -1,7 +1,7 @@
 package com.life.school.our.server.application.members.entity;
 
 import com.life.school.our.server.application.common.BaseTimeEntity;
-import lombok.Data;
+import com.life.school.our.server.application.members.dto.MemberDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,16 +14,16 @@ import javax.persistence.Table;
 @Setter
 @Entity
 @Table(name = "users")
-public class Users extends BaseTimeEntity {
+public class Members extends BaseTimeEntity {
 
     @Id
-    private long USER_ID;
+    private long userId;
     @Column(nullable = false)
-    private int USER_NUMBER;
+    private int userNumber;
     @Column(nullable = false)
-    private String USER_PASSWORD;
+    private String userPassword;
     @Column(nullable = false)
-    private String USER_NICKNAME;
+    private String userNickname;
 
 }
 

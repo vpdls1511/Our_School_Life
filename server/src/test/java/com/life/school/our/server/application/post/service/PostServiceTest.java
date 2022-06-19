@@ -17,7 +17,7 @@ class PostServiceTest {
 
     @Test
     void 최근_불만사항_가져오기() {
-        assertThat(getPostsDataRepository.getRecentlySuggest(0).size())
+        assertThat(getPostsDataRepository.getRecentlySuggest().size())
                 .isEqualTo(20);
     }
 

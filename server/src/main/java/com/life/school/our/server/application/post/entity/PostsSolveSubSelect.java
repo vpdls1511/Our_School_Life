@@ -1,18 +1,24 @@
 package com.life.school.our.server.application.post.entity;
 
 import com.life.school.our.server.application.common.BaseTimeEntity;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Subselect;
 
 import javax.persistence.*;
 
+@Entity
+@Subselect(
+      " select *"
+    + " from posts"
+    + " WHERE post_type = 1 "
+    + " order by created_at desc"
+    + " limit 20"
+)
 @Getter
 @Setter
-@Entity
 @Table(name = "Posts")
-public class Posts extends BaseTimeEntity {
+public class PostsSolveSubSelect extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,8 +32,8 @@ public class Posts extends BaseTimeEntity {
     private long POST_COMMENT;
     @Column(nullable = false)
     private long POST_LIKE;
-    @Column(nullable = false, columnDefinition = "TINYINT")
-    private int POST_TYPE;
+    @Column(nullable = false)
+    private boolean POST_TYPE;
 
 
 }
