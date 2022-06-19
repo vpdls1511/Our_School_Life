@@ -11,10 +11,11 @@ import javax.persistence.*;
 
 @Entity
 @Subselect(
-        "select *"
-        + " from posts"
-        + " order by created_at desc"
-        + " limit 20"
+      " select *"
+    + " from posts"
+    + " WHERE post_type = 0 "
+    + " order by created_at desc"
+    + " limit 20"
 )
 @Getter
 @Setter
