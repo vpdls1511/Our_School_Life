@@ -1,9 +1,18 @@
-const SuggestionItem = ({addText}) => {
+const SuggestionItem = ({addText, like, date}) => {
+
+  const formatDate = (targetTime) => {
+    const now = new Date(targetTime);
+    const year = now.getFullYear();
+    const month = now.getMonth()+1;
+    const ndate = now.getDate();
+
+    return year + "-" + month + "-" + ndate
+  }
 
   return <div className={"suggestionItemCard"}>
     <pre> {addText} </pre>
-    <p className={"itemLike"}>LIKE : 9,999+</p>
-    <p className={"itemDate"}>2022-06-21</p>
+    <p className={"itemLike"}>LIKE : {like}</p>
+    <p className={"itemDate"}>{formatDate(date)}</p>
   </div>
 }
 export default SuggestionItem

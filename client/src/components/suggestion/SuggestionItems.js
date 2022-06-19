@@ -20,7 +20,11 @@ const SuggestionItems = () => {
     {
       layoutList.map((item, key) => {
         console.log(item)
-        return <SuggestionItem addText={item[0]["post_DESC"]}/>
+        return <SuggestionItem
+          addText={item[0]["postDesc"]}
+          like = {item[0]["postLike"]}
+          date = {item[0]["created_at"]}
+        />
       })
     }
   </>

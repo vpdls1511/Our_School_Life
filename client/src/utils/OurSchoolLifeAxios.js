@@ -3,6 +3,7 @@ import axios from "axios";
 const host = "api/v1/"
 
 export const OurSchoolLifeAxios = async (method, path, data) => {
+  console.log(data)
   const apiData = axios({
     method : method,
     url : host+path,
