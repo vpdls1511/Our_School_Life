@@ -1,6 +1,5 @@
 package com.life.school.our.server.application.post.repository;
 
-import com.blazebit.persistence.CriteriaBuilderFactory;
 import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
