@@ -30,6 +30,11 @@ public class SuggestController {
         return new ResponseEntity<List>( tp , HttpStatus.OK);
     }
 
+    @PostMapping("create-suggest")
+    public ResponseEntity createSuggestPost(@RequestBody Posts posts){
+        return postService.createSuggest(posts);
+    }
+
     @PutMapping("update-suggest")
     public ResponseEntity<String> updateSuggestState(@RequestBody PostsDTO.UpdateRequest update){
         String responseString = postService.updateSuggest(update);

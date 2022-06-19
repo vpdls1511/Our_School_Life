@@ -7,6 +7,8 @@ import com.life.school.our.server.application.post.entity.PostsSubSelect;
 import com.life.school.our.server.application.post.repository.GetPostsDataRepository;
 import com.life.school.our.server.application.post.repository.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,6 +42,11 @@ public class PostService {
                         .collect(Collectors.toList())
                 )
                 .collect(Collectors.toList());
+    }
+
+    public ResponseEntity createSuggest(final Posts posts){
+        postsRepository.save(posts);
+        return new ResponseEntity(posts, null, HttpStatus.OK);
     }
 
     public String updateSuggest(PostsDTO.UpdateRequest update) {
