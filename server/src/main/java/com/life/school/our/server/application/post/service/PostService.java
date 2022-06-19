@@ -53,7 +53,7 @@ public class PostService {
         Optional<Posts> post = postsRepository.findById(update.getPost_id());
         PostsDTO.UpdateResponse response = new PostsDTO.UpdateResponse(update.getPost_id(), update.getPost_type());
 
-        post.get().setPOST_TYPE(update.getPost_type());
+        post.get().setPostType(update.getPost_type());
         postsRepository.save(post.get());
 
         return response.toString();

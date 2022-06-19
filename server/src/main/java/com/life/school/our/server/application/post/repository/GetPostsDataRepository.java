@@ -25,7 +25,7 @@ public class GetPostsDataRepository {
         return queryFactory
                 .select(postsSubSelect, members)
                 .from(postsSubSelect)
-                .join(members).on(postsSubSelect.USER_ID.eq(members.userId))
+                .join(members).on(postsSubSelect.userId.eq(members.userId))
                 .fetch();
     }
 
@@ -33,7 +33,7 @@ public class GetPostsDataRepository {
         return queryFactory
                 .select(postsSolveSubSelect, members)
                 .from(postsSolveSubSelect)
-                .join(members).on(postsSolveSubSelect.USER_ID.eq(members.userId))
+                .join(members).on(postsSolveSubSelect.userId.eq(members.userId))
                 .fetch();
     }
 

@@ -11,23 +11,23 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "Posts")
+@Table(name = "posts")
 public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long POST_ID;
+    private long postId;
     @Column
-    private long USER_ID;
+    private long userId;
 
     @Column(nullable = false)
-    private String POST_DESC;
+    private String postDesc;
     @Column(nullable = false)
-    private long POST_COMMENT;
+    private long postComment;
     @Column(nullable = false)
-    private long POST_LIKE;
+    private long postLike;
     @Column(nullable = false, columnDefinition = "TINYINT")
-    private int POST_TYPE;
+    private int postType;
 
 
 }

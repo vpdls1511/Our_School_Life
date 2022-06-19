@@ -17,23 +17,22 @@ import javax.persistence.*;
 )
 @Getter
 @Setter
-@Table(name = "Posts")
+@Table(name = "posts")
 public class PostsSolveSubSelect extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long POST_ID;
+    private long postId;
     @Column
-    private long USER_ID;
+    private long userId;
 
     @Column(nullable = false)
-    private String POST_DESC;
+    private String postDesc;
     @Column(nullable = false)
-    private long POST_COMMENT;
+    private long postComment;
     @Column(nullable = false)
-    private long POST_LIKE;
-    @Column(nullable = false)
-    private boolean POST_TYPE;
-
+    private long postLike;
+    @Column(nullable = false, columnDefinition = "TINYINT")
+    private int postType;
 
 }
