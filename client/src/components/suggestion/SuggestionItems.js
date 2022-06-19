@@ -1,50 +1,28 @@
 import SuggestionItem from "./SuggestionItem";
+import axios from "axios";
+import {useEffect, useState} from "react";
+import {OurSchoolLifeAxios} from "../../utils/OurSchoolLifeAxios";
 
 const SuggestionItems = () => {
-  const layoutList = [
-    "\n\n\n12314123412341",
-    "\n412341234141234123414123412341",
-    "\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n41234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
-    "\n\n\n12314123412341",
-    "\n412341234141234123414123412341",
-    "\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n41234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
-    "\n\n\n12314123412341",
-    "\n412341234141234123414123412341",
-    "\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n41234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
-    "\n\n\n12314123412341",
-    "\n412341234141234123414123412341",
-    "\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n41234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
-    "\n\n\n12314123412341",
-    "\n412341234141234123414123412341",
-    "\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n41234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
-    "\n\n\n12314123412341",
-    "\n412341234141234123414123412341",
-    "\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n412341234141234123414123412341",
-    "\n\n\n\n\n\n41234123414123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4123412341",
-    "\n\n\n\n\n\n\n\n\n\n\n\n4123412341"
-  ]
+
+  const [layoutList, setLayoutList] = useState([]);
+
+  useEffect(() => {
+    const path = "GET";
+    const url = "suggest-posts/recently"
+    OurSchoolLifeAxios(path, url)
+      .then(body => {
+        setLayoutList(body.data);
+      })
+  },[]);
 
   return <>
-    {layoutList.map((text, key) => {
-      return <SuggestionItem key={key} addText={text} />
-    })}
+    {
+      layoutList.map((item, key) => {
+        console.log(item)
+        return <SuggestionItem addText={item[0]["post_DESC"]}/>
+      })
+    }
   </>
 }
 export default SuggestionItems;

@@ -20,17 +20,15 @@
 
   .rightSide {
     flex: 2;
-    width: 100%;
-    height: calc(100vh - 140px);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding: 20px;
-
     .suggestionItemsWrap {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      height: 2000px;
+      -moz-column-count: 1;
+      column-count: 4;
+      -moz-column-gap: 20px;
+      column-gap: 20px;
+      -moz-column-fill: balance;
+      column-fill: balance;
+      margin: 20px auto 0;
+      padding: 2rem;
     }
   }
 }
